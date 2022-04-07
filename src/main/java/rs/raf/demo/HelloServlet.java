@@ -138,6 +138,7 @@ public class HelloServlet extends HttpServlet {
             }
             setValues(request);
 
+            sessions.add(request.getSession());
 
             if (mondayAmount.containsKey(request.getParameter(days[0]))) {
                 mondayAmount.put(request.getParameter(days[0]), mondayAmount.get(request.getParameter(days[0])) + 1);
